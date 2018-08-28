@@ -1,0 +1,605 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Factory Method (2) · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="AbstractFactory.html" />
+    
+    
+    <link rel="prev" href="FactoryMethod1.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../Concept/">
+            
+                <a href="../Concept/">
+            
+                    
+                    Concept
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../Concept/Concept1.html">
+            
+                <a href="../Concept/Concept1.html">
+            
+                    
+                    Design Pattern Concept (1)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../Concept/Concept2.html">
+            
+                <a href="../Concept/Concept2.html">
+            
+                    
+                    Design Pattern Concept (2)
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../Principle/">
+            
+                <a href="../Principle/">
+            
+                    
+                    Principle
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../Principle/SRP.html">
+            
+                <a href="../Principle/SRP.html">
+            
+                    
+                    Single Responsiblity Principle
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../Principle/OCP.html">
+            
+                <a href="../Principle/OCP.html">
+            
+                    
+                    Open Close Principle
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../Principle/LSP.html">
+            
+                <a href="../Principle/LSP.html">
+            
+                    
+                    Liskov Substitution Principle
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="../Principle/DIP.html">
+            
+                <a href="../Principle/DIP.html">
+            
+                    
+                    Dependency Inversion Principle
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="../Principle/ISP.html">
+            
+                <a href="../Principle/ISP.html">
+            
+                    
+                    Interface Segregation Principle
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="CreationalPatterns.html">
+            
+                <a href="CreationalPatterns.html">
+            
+                    
+                    Creational Pattern
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="SingletonPattern1.html">
+            
+                <a href="SingletonPattern1.html">
+            
+                    
+                    Singleton (1)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="SingletonPattern2.html">
+            
+                <a href="SingletonPattern2.html">
+            
+                    
+                    Singleton (2)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="FactoryMethod1.html">
+            
+                <a href="FactoryMethod1.html">
+            
+                    
+                    Factory Method (1)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.4.4" data-path="FactoryMethod2.html">
+            
+                <a href="FactoryMethod2.html">
+            
+                    
+                    Factory Method (2)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="AbstractFactory.html">
+            
+                <a href="AbstractFactory.html">
+            
+                    
+                    Abstrarct Factory
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6" data-path="Prototype1.html">
+            
+                <a href="Prototype1.html">
+            
+                    
+                    Prototype (1)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.7" data-path="Prototype2.html">
+            
+                <a href="Prototype2.html">
+            
+                    
+                    Prototype (2)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.8" data-path="Prototype3.html">
+            
+                <a href="Prototype3.html">
+            
+                    
+                    Prototype (3)
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >Factory Method (2)</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h2 id="factory-method-2">Factory Method (2)</h2>
+<h3 id="explanation">Explanation</h3>
+<h4 id="structure">Structure</h4>
+<p><img src="Images/FactoryMethod.svg" alt="Factory Method"></p>
+<p>BlackSmith subclasses redefine an abstract manufacture operation on BlackSmith to return the appropriate Weapon subclass. Once an BlackSmith subclass is instantiated, it can then instantiate specific weapon without knowing their class. We call manufactureWeapon a factory method because it&apos;s responsible for &quot;manufacturing&quot; an object.</p>
+<h4 id="programmatic-code-sample">Programmatic code sample</h4>
+<pre><code class="lang-java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">interface</span> <span class="hljs-title">BlackSmith</span> </span>{
+  <span class="hljs-function"><span class="hljs-keyword">public</span> Weapon <span class="hljs-title">manufactureWeapon</span><span class="hljs-params">(WeaponType type)</span></span>;
+}
+
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">ElfBlackSmith</span> <span class="hljs-keyword">implements</span> <span class="hljs-title">BlackSmith</span> </span>{
+  <span class="hljs-meta">@Override</span>
+  <span class="hljs-function"><span class="hljs-keyword">public</span> Weapon <span class="hljs-title">manufactureWeapon</span><span class="hljs-params">(WeaponType type)</span> </span>{
+    <span class="hljs-keyword">return</span> <span class="hljs-keyword">new</span> ElvishWeapon(type);
+  }
+}
+
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">OrcBlackSmith</span> </span>{
+  <span class="hljs-meta">@Override</span>
+  <span class="hljs-function"><span class="hljs-keyword">public</span> Weapon <span class="hljs-title">manufactureWeapon</span><span class="hljs-params">(WeaponType type)</span> </span>{
+    <span class="hljs-keyword">return</span> <span class="hljs-keyword">new</span> OrcishWeapon(type);
+  }
+}
+</code></pre>
+<p>Now as the customers come the correct type of blacksmith is summoned and requested weapons are manufactured</p>
+<pre><code class="lang-java">Blacksmith blacksmith = <span class="hljs-keyword">new</span> ElfBlacksmith();
+blacksmith.manufactureWeapon(WeaponType.SPEAR);
+blacksmith.manufactureWeapon(WeaponType.AXE);
+<span class="hljs-comment">// Elvish weapons are created</span>
+</code></pre>
+<p>How to hide factory method followed by an example</p>
+<p><img src="Images/LoggerDiagram.svg" alt="LoggerDiagram"></p>
+<pre><code class="lang-java"><span class="hljs-keyword">public</span> <span class="hljs-keyword">abstract</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">LoggerFactory</span> </span>{
+  <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">writeLog</span><span class="hljs-params">()</span> </span>{  
+        Logger logger = <span class="hljs-keyword">this</span>.createLogger();  
+        logger.writeLog();  
+    }  
+  <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">abstract</span> Logger <span class="hljs-title">createLogger</span><span class="hljs-params">()</span></span>;
+}
+
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">FileLoggerFactory</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">LoggerFactory</span> </span>{
+  <span class="hljs-meta">@Override</span>
+  <span class="hljs-function"><span class="hljs-keyword">public</span> Logger <span class="hljs-title">createLogger</span><span class="hljs-params">()</span> </span>{
+    Logger logger = <span class="hljs-keyword">new</span> FileLogger();
+    <span class="hljs-keyword">return</span> logger;
+  }
+}
+</code></pre>
+<p>Create an utility class</p>
+<pre><code class="lang-java"><span class="hljs-keyword">import</span> javax.xml.parsers.*;  
+<span class="hljs-keyword">import</span> org.w3c.dom.*;  
+<span class="hljs-keyword">import</span> org.xml.sax.SAXException;  
+<span class="hljs-keyword">import</span> java.io.*;  
+
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">XMLUtil</span> </span>{  
+<span class="hljs-comment">// Extract class name from xml config</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> Object <span class="hljs-title">getBean</span><span class="hljs-params">()</span> </span>{  
+        <span class="hljs-keyword">try</span> {    
+            DocumentBuilderFactory dFactory = DocumentBuilderFactory.newInstance();  
+            DocumentBuilder builder = dFactory.newDocumentBuilder();                              
+            Document doc = builder.parse(<span class="hljs-keyword">new</span> File(<span class="hljs-string">&quot;config.xml&quot;</span>));   
+
+            NodeList nl = doc.getElementsByTagName(<span class="hljs-string">&quot;className&quot;</span>);  
+            Node classNode = nl.item(<span class="hljs-number">0</span>).getFirstChild();  
+            String cName = classNode.getNodeValue();  
+
+            <span class="hljs-comment">// Create a class from its name</span>
+            Class c = Class.forName(cName);  
+            Object obj = c.newInstance();  
+            <span class="hljs-keyword">return</span> obj;  
+        }     
+        <span class="hljs-keyword">catch</span>(Exception e) {  
+            e.printStackTrace();  
+            <span class="hljs-keyword">return</span> <span class="hljs-keyword">null</span>;  
+        }  
+    }  
+}
+</code></pre>
+<pre><code class="lang-xml"><span class="hljs-tag">&lt;<span class="hljs-name">!&#x2014;</span> <span class="hljs-attr">config.xml</span> <span class="hljs-attr">--</span>&gt;</span>  
+<span class="php"><span class="hljs-meta">&lt;?</span>xml version=<span class="hljs-string">&quot;1.0&quot;</span><span class="hljs-meta">?&gt;</span></span>  
+<span class="hljs-tag">&lt;<span class="hljs-name">config</span>&gt;</span>  
+    <span class="hljs-tag">&lt;<span class="hljs-name">className</span>&gt;</span>FileLoggerFactory<span class="hljs-tag">&lt;/<span class="hljs-name">className</span>&gt;</span>  
+<span class="hljs-tag">&lt;/<span class="hljs-name">config</span>&gt;</span>
+</code></pre>
+<pre><code class="lang-java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Client</span> </span>{
+  <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String args[])</span> </span>{  
+        LoggerFactory factory = (LoggerFactory)XMLUtil.getBean();  
+        factory.writeLog();
+    }  
+}
+</code></pre>
+<h3 id="real-world-examples">Real world examples</h3>
+<ul>
+<li><a href="http://docs.oracle.com/javase/8/docs/api/java/util/Calendar.html#getInstance--" target="_blank">java.util.Calendar</a></li>
+<li><a href="http://docs.oracle.com/javase/8/docs/api/java/util/ResourceBundle.html#getBundle-java.lang.String-" target="_blank">java.util.ResourceBundle</a></li>
+<li><a href="http://docs.oracle.com/javase/8/docs/api/java/text/NumberFormat.html#getInstance--" target="_blank">java.text.NumberFormat</a></li>
+<li><a href="http://docs.oracle.com/javase/8/docs/api/java/nio/charset/Charset.html#forName-java.lang.String-" target="_blank">java.nio.charset.Charset</a></li>
+<li><a href="http://docs.oracle.com/javase/8/docs/api/java/net/URLStreamHandlerFactory.html#createURLStreamHandler-java.lang.String-" target="_blank">java.net.URLStreamHandlerFactory</a></li>
+<li><a href="https://docs.oracle.com/javase/8/docs/api/java/util/EnumSet.html#of-E-" target="_blank">java.util.EnumSet</a></li>
+<li><a href="https://docs.oracle.com/javase/8/docs/api/javax/xml/bind/JAXBContext.html#createMarshaller--" target="_blank">javax.xml.bind.JAXBContext</a></li>
+</ul>
+<h3 id="applicability">Applicability</h3>
+<p>Use the Factory Method when</p>
+<ul>
+<li>a class can&apos;t anticipate the class of objects it must create</li>
+<li>a class wants its subclasses to specify the objects it creates</li>
+<li>classes delegate responsibility to one of several helper subclasses, and you want to localize the knowledge of which helper subclass is the delegate</li>
+</ul>
+<h3 id="consequences">Consequences</h3>
+<blockquote>
+<p>Factory methods eliminate the need to bind application-specific classes into your code. The code only deals with the Product interface; therefore it can work with any user-defined Concrete Product classes.</p>
+<p>A potential disadvantage of factory methods is that clients might have to subclass the Creator class just to create a particular Concrete Product object. Subclassing is fine when the client has to subclass the Creator class any way, but otherwise the client now must deal with another point of evolution.</p>
+</blockquote>
+<p>Here is two additional consequences of the Factory Method pattern:</p>
+<blockquote>
+<ol>
+<li>Provides hooks for subclasses. Creating objects inside a class with afactory method is always more flexible than creating an object directly.Factory Method gives subclasses a hook for providing an extended versionof an object.</li>
+<li>Connects parallel class hierarchies. Parallel class hierarchies result when a class delegates some of its responsibilities to a separate class.</li>
+</ol>
+</blockquote>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="FactoryMethod1.html" class="navigation navigation-prev " aria-label="Previous page: Factory Method (1)">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="AbstractFactory.html" class="navigation navigation-next " aria-label="Next page: Abstrarct Factory">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Factory Method (2)","level":"1.4.4","depth":2,"next":{"title":"Abstrarct Factory","level":"1.4.5","depth":2,"path":"Creational/AbstractFactory.md","ref":"Creational/AbstractFactory.md","articles":[]},"previous":{"title":"Factory Method (1)","level":"1.4.3","depth":2,"path":"Creational/FactoryMethod1.md","ref":"Creational/FactoryMethod1.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Creational/FactoryMethod2.md","mtime":"2017-12-20T06:18:38.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-08-28T01:05:10.034Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

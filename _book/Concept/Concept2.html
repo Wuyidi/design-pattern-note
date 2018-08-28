@@ -1,0 +1,629 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Design Pattern Concept (2) · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../Principle/" />
+    
+    
+    <link rel="prev" href="Concept1.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Concept
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="Concept1.html">
+            
+                <a href="Concept1.html">
+            
+                    
+                    Design Pattern Concept (1)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.2.2" data-path="Concept2.html">
+            
+                <a href="Concept2.html">
+            
+                    
+                    Design Pattern Concept (2)
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../Principle/">
+            
+                <a href="../Principle/">
+            
+                    
+                    Principle
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../Principle/SRP.html">
+            
+                <a href="../Principle/SRP.html">
+            
+                    
+                    Single Responsiblity Principle
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../Principle/OCP.html">
+            
+                <a href="../Principle/OCP.html">
+            
+                    
+                    Open Close Principle
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../Principle/LSP.html">
+            
+                <a href="../Principle/LSP.html">
+            
+                    
+                    Liskov Substitution Principle
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="../Principle/DIP.html">
+            
+                <a href="../Principle/DIP.html">
+            
+                    
+                    Dependency Inversion Principle
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="../Principle/ISP.html">
+            
+                <a href="../Principle/ISP.html">
+            
+                    
+                    Interface Segregation Principle
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../Creational/CreationalPatterns.html">
+            
+                <a href="../Creational/CreationalPatterns.html">
+            
+                    
+                    Creational Pattern
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../Creational/SingletonPattern1.html">
+            
+                <a href="../Creational/SingletonPattern1.html">
+            
+                    
+                    Singleton (1)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../Creational/SingletonPattern2.html">
+            
+                <a href="../Creational/SingletonPattern2.html">
+            
+                    
+                    Singleton (2)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../Creational/FactoryMethod1.html">
+            
+                <a href="../Creational/FactoryMethod1.html">
+            
+                    
+                    Factory Method (1)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="../Creational/FactoryMethod2.html">
+            
+                <a href="../Creational/FactoryMethod2.html">
+            
+                    
+                    Factory Method (2)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="../Creational/AbstractFactory.html">
+            
+                <a href="../Creational/AbstractFactory.html">
+            
+                    
+                    Abstrarct Factory
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6" data-path="../Creational/Prototype1.html">
+            
+                <a href="../Creational/Prototype1.html">
+            
+                    
+                    Prototype (1)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.7" data-path="../Creational/Prototype2.html">
+            
+                <a href="../Creational/Prototype2.html">
+            
+                    
+                    Prototype (2)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.8" data-path="../Creational/Prototype3.html">
+            
+                <a href="../Creational/Prototype3.html">
+            
+                    
+                    Prototype (3)
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >Design Pattern Concept (2)</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h2 id="design-pattern-concept-2">Design Pattern Concept (2)</h2>
+<blockquote>
+<p><strong>Misconception: &quot;Patterns guarantee reusable software, higher productivity, world peace, etc.&quot;</strong></p>
+<p>Patterns don&apos;t guarantee anything. They don&apos;t remove humans from the creative process. They do help humans engaged in the creative process by describing known solutions to common problems in the domain. They are another tool in the designer&apos;s toolbox, not a silver bullet!</p>
+</blockquote>
+<h3 id="the-catalog-of-design-patterns-organize-the-catalog">The catalog of design patterns (Organize the catalog)</h3>
+<blockquote>
+<p>We classify design patterns by two criteria. </p>
+<ol>
+<li>The first criterion, called purpose, reflects what a pattern does. Patterns can have either creational, structural, or behavioral purpose. Creational patterns concern the process of object creation. Structural patterns deal with the composition of classes or objects. Behavioral pattern characterize the ways in which classes or objects interact and distribute responsibility.</li>
+<li>The second criterion, called scope, specifies whether the pattern applies primarily to classes or to objects. Class patterns deal with relationships between classes and their subclasses. These relationships are established through inheritance, so they are static&#x2014;fixed at compile-time. Object patterns deal with object relationships, which can be changed at run-time and are more dynamic. Almost all patterns use inheritance to some extent. So the only patterns labeled &quot;class patterns&quot; are those that focus on class relationships. Note that most patterns are in the Object scope.</li>
+</ol>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>Purpose</th>
+<th>Pattern Name</th>
+<th>Scope</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Creational</td>
+<td>Singleton Pattern (&#x5355;&#x4F8B;&#x6A21;&#x5F0F;)</td>
+<td>Object</td>
+</tr>
+<tr>
+<td>Creational</td>
+<td>Simple Factory Pattern (&#x7B80;&#x5355;&#x5DE5;&#x5382;&#x6A21;&#x5F0F;)</td>
+<td>Class</td>
+</tr>
+<tr>
+<td>Creational</td>
+<td>Factory Method Pattern (&#x5DE5;&#x5382;&#x65B9;&#x6CD5;&#x6A21;&#x5F0F;)</td>
+<td>Class</td>
+</tr>
+<tr>
+<td>Creational</td>
+<td>Abstract Factory Pattern (&#x62BD;&#x8C61;&#x5DE5;&#x5382;&#x6A21;&#x5F0F;)</td>
+<td>Object</td>
+</tr>
+<tr>
+<td>Creational</td>
+<td>Prototype Pattern (&#x539F;&#x578B;&#x6A21;&#x5F0F;)</td>
+<td>Object</td>
+</tr>
+<tr>
+<td>Creational</td>
+<td>Builder Pattern (&#x5EFA;&#x9020;&#x8005;&#x6A21;&#x5F0F;)</td>
+<td>Object</td>
+</tr>
+<tr>
+<td>Structural</td>
+<td>Adapter Pattern (&#x9002;&#x914D;&#x5668;&#x6A21;&#x5F0F;)</td>
+<td>Object/Class</td>
+</tr>
+<tr>
+<td>Structural</td>
+<td>Bridge Pattern (&#x6865;&#x63A5;&#x6A21;&#x5F0F;)</td>
+<td>Object</td>
+</tr>
+<tr>
+<td>Structural</td>
+<td>Composite Pattern (&#x7EC4;&#x5408;&#x6A21;&#x5F0F;)</td>
+<td>Object</td>
+</tr>
+<tr>
+<td>Structural</td>
+<td>Decorator Pattern (&#x88C5;&#x9970;&#x6A21;&#x5F0F;)</td>
+<td>Object</td>
+</tr>
+<tr>
+<td>Structural</td>
+<td>Facade Pattern (&#x5916;&#x89C2;&#x6A21;&#x5F0F;)</td>
+<td>Object</td>
+</tr>
+<tr>
+<td>Structural</td>
+<td>Flyweight Pattern (&#x4EAB;&#x5143;&#x6A21;&#x5F0F;)</td>
+<td>Object</td>
+</tr>
+<tr>
+<td>Structural</td>
+<td>Proxy Pattern (&#x4EE3;&#x7406;&#x6A21;&#x5F0F;)</td>
+<td>Object</td>
+</tr>
+<tr>
+<td>Behavioral</td>
+<td>Chain of Resposibility Pattern (&#x804C;&#x8D23;&#x94FE;&#x6A21;&#x5F0F;)</td>
+<td>Object</td>
+</tr>
+<tr>
+<td>Behavioral</td>
+<td>Command Pattern (&#x547D;&#x4EE4;&#x6A21;&#x5F0F;)</td>
+<td>Object</td>
+</tr>
+<tr>
+<td>Behavioral</td>
+<td>Interpreter Pattern (&#x89E3;&#x91CA;&#x5668;&#x6A21;&#x5F0F;)</td>
+<td>Class</td>
+</tr>
+<tr>
+<td>Behavioral</td>
+<td>Iterator Pattern (&#x8FED;&#x4EE3;&#x5668;&#x6A21;&#x5F0F;)</td>
+<td>Object</td>
+</tr>
+<tr>
+<td>Behavioral</td>
+<td>Mediator Pattern (&#x4E2D;&#x4ECB;&#x8005;&#x6A21;&#x5F0F;)</td>
+<td>Object</td>
+</tr>
+<tr>
+<td>Behavioral</td>
+<td>Memento Pattern (&#x5907;&#x5FD8;&#x5F55;&#x6A21;&#x5F0F;)</td>
+<td>Object</td>
+</tr>
+<tr>
+<td>Behavioral</td>
+<td>Observer Pattern (&#x89C2;&#x5BDF;&#x8005;&#x6A21;&#x5F0F;)</td>
+<td>Object</td>
+</tr>
+<tr>
+<td>Behavioral</td>
+<td>State Pattern (&#x72B6;&#x6001;&#x6A21;&#x5F0F;)</td>
+<td>Object</td>
+</tr>
+<tr>
+<td>Behavioral</td>
+<td>Strategy Pattern (&#x7B56;&#x7565;&#x6A21;&#x5F0F;)</td>
+<td>Object</td>
+</tr>
+<tr>
+<td>Behavioral</td>
+<td>Template Method Pattern (&#x6A21;&#x677F;&#x65B9;&#x6CD5;&#x6A21;&#x5F0F;)</td>
+<td>Class</td>
+</tr>
+<tr>
+<td>Behavioral</td>
+<td>Visitor Pattern (&#x8BBF;&#x95EE;&#x8005;&#x6A21;&#x5F0F;)</td>
+<td>Object</td>
+</tr>
+</tbody>
+</table>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="Concept1.html" class="navigation navigation-prev " aria-label="Previous page: Design Pattern Concept (1)">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../Principle/" class="navigation navigation-next " aria-label="Next page: Principle">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Design Pattern Concept (2)","level":"1.2.2","depth":2,"next":{"title":"Principle","level":"1.3","depth":1,"path":"Principle/README.md","ref":"Principle/README.md","articles":[{"title":"Single Responsiblity Principle","level":"1.3.1","depth":2,"path":"Principle/SRP.md","ref":"Principle/SRP.md","articles":[]},{"title":"Open Close Principle","level":"1.3.2","depth":2,"path":"Principle/OCP.md","ref":"Principle/OCP.md","articles":[]},{"title":"Liskov Substitution Principle","level":"1.3.3","depth":2,"path":"Principle/LSP.md","ref":"Principle/LSP.md","articles":[]},{"title":"Dependency Inversion Principle","level":"1.3.4","depth":2,"path":"Principle/DIP.md","ref":"Principle/DIP.md","articles":[]},{"title":"Interface Segregation Principle","level":"1.3.5","depth":2,"path":"Principle/ISP.md","ref":"Principle/ISP.md","articles":[]}]},"previous":{"title":"Design Pattern Concept (1)","level":"1.2.1","depth":2,"path":"Concept/Concept1.md","ref":"Concept/Concept1.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Concept/Concept2.md","mtime":"2017-11-01T12:03:30.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-08-28T01:05:10.034Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
