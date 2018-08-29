@@ -24,7 +24,7 @@ when we clone complex objects which contains other objects, we should take care 
 
 #### Shallow Copy Vs Deep Copy in Java
 
-Below is the list of differences between shallow copy and deep copy in java.
+**Below is the list of differences between shallow copy and deep copy in java.**
 
 | Shallow Copy                                                 | Deep Copy                                                    |
 | ------------------------------------------------------------ | ------------------------------------------------------------ |
@@ -36,7 +36,7 @@ Below is the list of differences between shallow copy and deep copy in java.
 
 ![image-20180828105602823](./Images/WeeklyLog.svg)
 
-Below is the example which creates the shallow copy of an object weekly log with an attachment
+**Below is the example which creates the shallow copy of an object weekly log with an attachment**
 
 ```java
 import java.util.logging.Logger;
@@ -52,14 +52,78 @@ class Attachment {
     }
     
     public void download() {
-		LOGGER.log("Start downloading...")
+		LOGGER.log("Start downloading attachment: " + name);
     }
 }
 ```
 
 ```java
 class WeeklyLog implements Cloneable {
+    private Attachment attachment;
+    private String name;
+    private String date;
+    private String content;
     
+    // get set method
+    [...]
+    
+    // Shallow Copy
+    public WeeklyLog clone() {
+        Object obj = null;
+        try {
+            obj = super.clone();
+            return (WeeklyLog)obj;
+        } catch(CloneNotSupportedException e) {
+            LOGGER.log("Error: clone is not supported")
+			return null;
+        }
+    }
+}
+```
+
+```java
+class Client {
+    public static void main(String[] args) {
+		WeeklyLog log1 = new WeeklyLog();
+        Attachment attachment = new Attachment();
+        log1.setAttachment(attachment);
+        WeeklyLog log2 = log1.clone();
+        // Compare weekly log (false)
+        LOGGER.log("log1 is the same with log2: " + (log1 == log2))
+        // Compare their attachment (true)
+        LOGGER.log("Whether the attachment is the same: " 
+			+ (log1.getAttachment() == log2.getAttachment());
+	}
+}
+```
+
+The result of comparing the references of their attachment object is true, so the shallow copy of an object will have exact copy of all the fields of original object. If original object has any references to other objects as fields, then only references of those objects are copied into clone object, copy of those objects are not created. That means any changes made to those objects through clone object will be reflected in original object or vice-versa.
+
+**Below is the example which creates the deep copy of an object weekly log with an attachment**
+
+A typical way of implementing a deep clone is to go through a class and write code to create new objects and copy over all of the values to these new objects. This can be a time-consuming process if the object being cloned is complicated. A simple way of performing a deep clone is for all of the classes that make up a class to implement the Serializable interface. If this is the case, we can serialize all of the values of the object and then deserialize all of these values to a new object. This in essence is a shortcut to performing a deep copy, since all of the values get copied over into new objects.
+
+```java
+import java.io.*
+class WeeklyLog implements Serializable {
+	private Attachment attachment;
+	private String name;
+	private String date;
+	private String content;
+	
+	// get set method
+	[...]
+	// Using serialization implement deep copy
+	public WeeklyLog deepClone() throws IOException, ClassNotFoundException,
+    OptionalDataException {
+    	ByteArrayOutputStream baos = new ByteArrayOutputStream();
+    	ObjectOutputStream oos = new ObjectOutputStream(baos);
+    	oos.writeObject(this);
+    	
+    	ByteArrayInputStream bis = new ByteArrayInputStream(baos.toByteArray());
+    	ObjectInputStream ois = new ObjectInputStream(bis);
+    	return (WeeklyLog)ois.readObject();
+    }
 }
 ```
 
