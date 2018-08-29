@@ -40,7 +40,7 @@ public class Client {
 	public static void main( String arg[] ) 
 	{
 		ConcretePrototype obj1= new ConcretePrototype ();
-		ConcretePrototype obj2 = obj1.clone();
+		ConcretePrototype obj2 = (ConcretePrototype)obj1.clone();
 	}
 
 }
@@ -48,7 +48,7 @@ public class Client {
 
 #### Copying object in Java
 
-**clone**() is a **method** in the **Java** programming language for **object** duplication. In **java**, objects are manipulated through reference variables, and there is no operator for copying an **object**—the assignment operator duplicates the reference, not the **object**. The**clone**() **method provides** this missing functionality.
+**clone**() is a **method** in the **Java** programming language for **object** duplication. In **java**, objects are manipulated through reference variables, and there is no operator for copying an **object**—the assignment operator duplicates the reference, not the **object**. The **clone**() **method provides** this missing functionality.
 
 ```java
 class Prototype implements Cloneable { 
